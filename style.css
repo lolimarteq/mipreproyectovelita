@@ -1,0 +1,239 @@
+/* ====== ESTILOS GENERALES ====== */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fffaf5;
+  color: #333;
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #6b3e26;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #6b3e26;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.3rem;
+  color: #5a2d0c;
+}
+
+a {
+  color: #d46a6a;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ====== HEADER ====== */
+.main-header {
+  background-color: #fffaf5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.header-logo {
+  border-radius: 50%;
+}
+
+/* ====== NAVEGACIÓN ====== */
+header nav ul {
+  list-style: none;
+  background-color: #f7d7ba;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-radius: 20px;
+}
+
+header nav ul li {
+  margin: 5px 15px;
+}
+
+header nav ul li a {
+  font-weight: 600;
+  color: #5a2d0c;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+@media (max-width: 768px) {
+  header nav ul {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header nav ul.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* ====== CATÁLOGO ====== */
+.catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* ====== TARJETAS ====== */
+.flashcard {
+  perspective: 1000px;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.flashcard.visible {
+  opacity: 1;
+  transform: scale(1);
+  animation: fadeInZoom 0.8s ease forwards;
+}
+
+@keyframes fadeInZoom {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.card {
+  width: 220px;
+  height: 260px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.back {
+  background-color: #fff0e6;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.back h3 { font-size: 1.2rem; }
+.back p { font-size: 1rem; }
+
+.back a {
+  background-color: #d46a6a;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.back a:hover {
+  background-color: #b65454;
+}
+
+/* ====== FORMULARIO ====== */
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, textarea {
+  border: 1px solid #d8bca2;
+  border-radius: 8px;
+  padding: 10px;
+  font-family: inherit;
+}
+
+button {
+  background-color: #d46a6a;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #b65454;
+}
+
+/* ====== TABLA ====== */
+table {
+  margin: 20px auto;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #e8c7a6;
+}
+
+th {
+  background-color: #f7d7ba;
+}
+
+/* ====== RESEÑAS ====== */
+.reseñas .card {
+  background-color: #fff0e6;
+  border-radius: 15px;
+  padding: 15px;
+  margin: 10px auto;
+  width: 60%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* ====== FOOTER ====== */
+footer {
+  background-color: #6b3e26;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
