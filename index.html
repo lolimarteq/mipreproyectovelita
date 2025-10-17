@@ -1,139 +1,201 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <title>Catálogo Velita | Velas Artesanales de Cera de Soja</title> 
-    <link rel="stylesheet" href="styles.css"> 
+  <meta charset="UTF-8">
+  <title>Catálogo Velita | Velas Artesanales de Cera de Soja</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Fuente de Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header class="main-header">
+  <header class="main-header">
     <a href="index.html">
-      <img src="Logo velita.jpeg" alt="Logo del sitio Velita" class="header-logo"
-    width="120"   height="auto"> 
+      <img src="Logo velita.jpeg" alt="Logo del sitio Velita" class="header-logo" width="120" height="auto">
     </a>
-    </header>
-<body>
+  </header>
 
-<header>
-  <h1>Catálogo Velita</h1>
-  <p>Velas artesanales con amor y elegancia</p>
-  <span class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('show')">&#9776;</span>
-  <nav>
-    <ul>
-      <li><a href="#madera">Velas en Madera</a></li>
-      <li><a href="#vidrio">Velas en Vidrio</a></li>
-      <li><a href="#nosotros">Nosotros</a></li>
-      <li><a href="#tips">Tips de Uso</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-  </nav>
-</header>
-
-<main>
-  <section>
-    <h2>Presentación</h2>
-    
-    <div style="display: flex; justify-content: center; align-items: center;">
-  <video controls width="200">
-    <source src="Video Vela 1.mp4" type="video/mp4" />
-    <track src="subtitulos.vtt" kind="subtitles" srclang="es" label="Español" />
-  </video>
-</div>
-
-  <section id="formulario">
-    <h2>Formulario de Contacto</h2>
-    <form action="https://formspree.io/f/tu-cuenta" method="POST">
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="nombre" required>
-      <label for="email">Correo electrónico:</label>
-      <input type="email" id="email" name="email" required>
-      <label for="mensaje">Mensaje:</label>
-      <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
-      <button type="submit">Enviar</button>
-    </form>
-  </section>
-
-  <section>
-    <h2>Mensajes recibidos</h2>
-    <table>
-      <thead>
-        <tr><th>Nombre</th><th>Email</th><th>Mensaje</th><th>Estado</th></tr>
-      </thead>
-      <tbody>
-        <tr><td colspan="4">Mensajes pendientes de respuesta</td></tr>
-        <tr><td>María</td><td>maria@mail.com</td><td>Hola!</td><td>Pendiente</td></tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section id="madera">
-    <h2>Velas en Madera</h2>
-    <div class="catalogo">
-      <article class="flashcard">
-        <div class="card">
-          <div class="front"><img src="Vela vaso madera 250 ml 1.jpeg" alt="Vela madera"></div>
-          <div class="back">
-            <h3>Velita Madera</h3>
-            <p>Aroma floral • 250 ml</p>
-            <a href="#">Comprar</a>
-          </div>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section id="vidrio">
-    <h2>Velas en Vidrio</h2>
-    <div class="catalogo">
-      <article class="flashcard">
-        <div class="card">
-          <div class="front"><img src="Vela vidrio 250 ml.jpeg" alt="Vela en vidrio"></div>
-          <div class="back">
-            <h3>Velita de Vidrio</h3>
-            <p>Aroma floral • 250 ml</p>
-            <a href="#">Comprar</a>
-          </div>
-        </div>
-      </article>
-    </div>
-  </section>
-
-
-
-  <section class="reseñas">
-    <h2>Reseñas</h2>
-    <section class="card"><p><strong>Ana:</strong> Hermosas velas</p></section>
-    <section class="card"><p><strong>Juan:</strong> Aromas increíbles</p></section>
-    <section class="card"><p><strong>Lucía:</strong> Perfectas para regalar</p></section>
-  </section>
-
-  <section id="nosotros">
-    <h2>Sobre Nosotros</h2>
-    <p>En <strong>Velita</strong> creemos en el poder de los detalles y la calidez.</p>
-  </section>
-
-  <section id="tips">
-    <h2>Tips de Uso</h2>
-    <aside>
-      <h3>Consejos:</h3>
+  <header>
+    <h1>Catálogo Velita</h1>
+    <p>Velas artesanales con amor y elegancia</p>
+    <span class="menu-toggle" onclick="document.querySelector('nav ul').classList.toggle('show')">&#9776;</span>
+    <nav>
       <ul>
-        <li>Mantén la mecha recortada</li>
-        <li>No dejes la vela encendida más de 3 horas</li>
+        <li><a href="#madera">Velas en Madera</a></li>
+        <li><a href="#vidrio">Velas en Vidrio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#tips">Tips de Uso</a></li>
+        <li><a href="#contacto">Contacto</a></li>
       </ul>
-    </aside>
-  </section>
+    </nav>
+  </header>
 
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p>📩 <a href="mailto:contacto@velita.com">contacto@velita.com</a></p>
-    <p>📱 <a href="https://wa.me/XXXXXXXXXXX" target="_blank">+54 9 11 0000 0000</a></p>
-  </section>
-</main>
+  <main>
+    <section>
+      <h2>Presentación</h2>
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <video controls width="200">
+          <source src="Video Vela 1.mp4" type="video/mp4" />
+          <track src="subtitulos.vtt" kind="subtitles" srclang="es" label="Español" />
+        </video>
+      </div>
+    </section>
 
-<footer>
-  <p>&copy; 2025 Velita • Velas artesanales eco-friendly</p>
-</footer>
+    <section id="formulario">
+      <h2>Formulario de Contacto</h2>
+      <form action="https://formspree.io/f/tu-cuenta" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Mensajes recibidos</h2>
+      <table>
+        <thead>
+          <tr><th>Nombre</th><th>Email</th><th>Mensaje</th><th>Estado</th></tr>
+        </thead>
+        <tbody>
+          <tr><td colspan="4">Mensajes pendientes de respuesta</td></tr>
+          <tr><td>María</td><td>maria@mail.com</td><td>Hola!</td><td>Pendiente</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- === SECCIÓN DE VELAS EN MADERA === -->
+    <section id="madera">
+      <h2>Velas en Madera</h2>
+      <div class="catalogo">
+
+        <article class="flashcard">
+          <div class="card">
+            <div class="front"><img src="Vela vaso madera 250 ml 1.jpeg" alt="Vela madera 1"></div>
+            <div class="back">
+              <h3>Velita Madera</h3>
+              <p>Aroma floral • 250 ml</p>
+              <a href="#">Comprar</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="flashcard">
+          <div class="card">
+            <div class="front"><img src="Vela vaso madera 250 ml 2.jpeg" alt="Vela madera 2"></div>
+            <div class="back">
+              <h3>Velita Madera</h3>
+              <p>Aroma cítrica • 250 ml</p>
+              <a href="#">Comprar</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="flashcard">
+          <div class="card">
+            <div class="front"><img src="Vela vaso madera 250 ml 3.jpeg" alt="Vela madera 3"></div>
+            <div class="back">
+              <h3>Velita Madera</h3>
+              <p>Aroma dulce • 250 ml</p>
+              <a href="#">Comprar</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="flashcard">
+          <div class="card">
+            <div class="front"><img src="Vela vaso madera 250 ml 4.jpeg" alt="Vela madera 4"></div>
+            <div class="back">
+              <h3>Velita Madera</h3>
+              <p>Aroma especiada • 250 ml</p>
+              <a href="#">Comprar</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- === SECCIÓN DE VELAS EN VIDRIO === -->
+    <section id="vidrio">
+      <h2>Velas en Vidrio</h2>
+      <div class="catalogo">
+
+        <article class="flashcard">
+          <div class="card">
+            <div class="front"><img src="Vela vidrio 250 ml sin papel oro.jpeg" alt="Vela vidrio 1"></div>
+            <div class="back">
+              <h3>Velita de Vidrio</h3>
+              <p>Aroma floral • 250 ml</p>
+              <a href="#">Comprar</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="flashcard">
+          <div class="card">
+            <div class="front"><img src="Vela vidrio 250 ml.jpeg" alt="Vela vidrio 2"></div>
+            <div class="back">
+              <h3>Velita de Vidrio</h3>
+              <p>Aroma cítrica • 250 ml</p>
+              <a href="#">Comprar</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="reseñas">
+      <h2>Reseñas</h2>
+      <section class="card"><p><strong>Ana:</strong> Hermosas velas</p></section>
+      <section class="card"><p><strong>Juan:</strong> Aromas increíbles</p></section>
+      <section class="card"><p><strong>Lucía:</strong> Perfectas para regalar</p></section>
+    </section>
+
+    <section id="nosotros">
+      <h2>Sobre Nosotros</h2>
+      <p>En <strong>Velita</strong> creemos en el poder de los detalles y la calidez.</p>
+    </section>
+
+    <section id="tips">
+      <h2>Tips de Uso</h2>
+      <aside>
+        <h3>Consejos:</h3>
+        <ul>
+          <li>Mantén la mecha recortada</li>
+          <li>No dejes la vela encendida más de 3 horas</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>📩 <a href="mailto:contacto@velita.com">contacto@velita.com</a></p>
+      <p>📱 <a href="https://wa.me/XXXXXXXXXXX" target="_blank">+54 9 11 0000 0000</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Velita • Velas artesanales eco-friendly</p>
+  </footer>
+
+  <script>
+    // Animación de aparición al hacer scroll
+    const flashcards = document.querySelectorAll('.flashcard');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    flashcards.forEach(card => observer.observe(card));
+  </script>
 </body>
 </html>
