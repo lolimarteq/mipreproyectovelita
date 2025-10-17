@@ -1,0 +1,25 @@
+body { font-family: 'Poppins', sans-serif; background: #fdf9f7; color: #444; margin: 0; padding: 0; }
+header { background: #b57b6c; color: white; padding: 20px; text-align: center; position: relative; }
+nav ul { list-style: none; display: flex; justify-content: center; gap: 20px; padding: 0; margin: 0; }
+nav a { color: white; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+nav a:hover { color: #ffe9e3; text-decoration: underline; }
+.menu-toggle { display: none; font-size: 28px; cursor: pointer; position: absolute; top: 20px; right: 20px; color: white; }
+main { padding: 30px 15px; }
+section { margin-bottom: 60px; }
+h2 { margin-bottom: 20px; text-align: center; color: #8a4b39; font-weight: 600; }
+.catalogo { display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; }
+.flashcard { width: 250px; height: 300px; perspective: 1000px; }
+.card { width: 100%; height: 100%; position: relative; transform-style: preserve-3d; transition: transform 0.8s ease; }
+.flashcard:hover .card { transform: rotateY(180deg); }
+.front, .back { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.15); overflow: hidden; }
+.front img { width: 100%; height: 100%; object-fit: cover; border-radius: 15px; }
+.back { background: #fffaf8; color: #333; transform: rotateY(180deg); display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; text-align: center; border: 1px solid #e3bfb6; }
+.back h3 { margin-bottom: 10px; color: #8a4b39; font-weight: 600; }
+.back a { margin-top: 10px; display: inline-block; background: #b57b6c; color: white; padding: 8px 15px; border-radius: 8px; text-decoration: none; transition: background 0.3s; }
+.back a:hover { background: #8a4b39; }
+aside { background: #f1e6e1; padding: 20px; margin: 30px auto; max-width: 900px; border-radius: 12px; }
+footer { background: #b57b6c; color: white; text-align: center; padding: 15px; margin-top: 40px; font-weight: 300; }
+table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+tr:nth-child(even) { background-color: #d84242; }
+@media (max-width: 768px) { nav ul { display: none; flex-direction: column; background: #8a4b39; position: absolute; top: 70px; right: 15px; width: 200px; padding: 15px; border-radius: 10px; } nav ul.show { display: flex; } .menu-toggle { display: block; } }
